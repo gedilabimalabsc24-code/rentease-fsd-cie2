@@ -1,0 +1,121 @@
+/* RoommateCard.css */
+
+.roommate-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roommate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ── Match Badge – Modification 2 ── */
+.match-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.high-match {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.medium-match {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.low-match {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.roommate-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+}
+
+.roommate-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.roommate-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.roommate-college {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.roommate-location {
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+.roommate-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0.3rem 0;
+}
+
+.tag {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.budget-tag { background: #eff6ff; color: var(--primary); }
+.sharing-tag { background: #f0fdf4; color: #166534; }
+.food-tag { background: #fff7ed; color: #c2410c; }
+.smoking-tag { background: #f1f5f9; color: var(--gray); }
+
+.roommate-intro {
+  color: var(--gray);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.view-profile-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+
+.view-profile-btn:hover {
+  background: var(--primary-dark);
+}

@@ -1,0 +1,54 @@
+import { Link } from "react-router-dom";
+import "./Footer.css";
+
+function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-brand">
+          <h2>🏠 RentEase</h2>
+          <p>
+            Your trusted platform for finding student-friendly rentals and
+            roommates in Bengaluru.
+          </p>
+        </div>
+
+        <div className="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/properties">Properties</Link></li>
+            <li><Link to="/roommates">Find Roommate</Link></li>
+            <li><Link to="/favorites">Favorites</Link></li>
+            <li><Link to="/add-property">Add Property</Link></li>
+            <li><Link to="/about">About</Link></li>
+          </ul>
+        </div>
+
+        <div className="footer-colleges">
+          <h4>Near Colleges</h4>
+          <ul>
+            <li>RV University</li>
+            <li>Christ University</li>
+            <li>PES University</li>
+            <li>Jain University</li>
+            <li>BMS College of Engineering</li>
+          </ul>
+        </div>
+
+        <div className="footer-contact">
+          <h4>Contact Us</h4>
+          <p>📧 rentease@student.com</p>
+          <p>📞 +91-9876543210</p>
+          <p>📍 Bengaluru, Karnataka</p>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <p>© 2024 RentEase – CS3301 Full Stack Development Project | Built with React + Express</p>
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;
