@@ -123,3 +123,30 @@
     padding: 1.5rem;
   }
 }
+
+/* ── NO MATCHES BOX ── */
+.no-matches-box {
+  background: #fff7ed;
+  border: 2px solid #fed7aa;
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.no-match-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.no-matches-box h3 {
+  font-size: 1.2rem;
+  color: #c2410c;
+  margin-bottom: 0.5rem;
+}
+
+.no-matches-box p {
+  color: #78350f;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
