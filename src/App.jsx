@@ -31,7 +31,6 @@ import FindRoommate from "./pages/FindRoommate";
 import RoommateDetails from "./pages/RoommateDetails";
 import Favorites from "./pages/Favorites";
 import AddProperty from "./pages/AddProperty";
-import About from "./pages/About";
 
 import "./App.css";
 
@@ -127,9 +126,6 @@ function App() {
 
           {/* ADD PROPERTY – Form to submit a new property via POST API */}
           <Route path="/add-property" element={<AddProperty />} />
-
-          {/* ABOUT – Class Component showing project info and concepts */}
-          <Route path="/about" element={<About />} />
         </Routes>
       </main>
 

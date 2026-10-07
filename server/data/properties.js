@@ -3,8 +3,14 @@
  * CS3301 Full Stack Development – CIE-2 Project
  *
  * 15 realistic rental properties across Bengaluru.
- * Properties are spread across all 5 colleges and all 8 locations
- * so that search, college filter, and type filter all produce real results.
+ * Each property image is carefully chosen to represent the actual property type:
+ *   PG         → bedroom with bed, study table, cupboard
+ *   Studio     → compact studio apartment interior
+ *   1BHK       → single bedroom apartment interior
+ *   2BHK       → two-bedroom apartment / living room
+ *   3BHK       → spacious multi-room apartment
+ *   Hostel     → hostel/dorm room with bunk beds
+ *   Shared Apt → shared flat interior with multiple beds
  */
 
 const properties = [
@@ -22,8 +28,8 @@ const properties = [
     distanceFromCollege: "1.2 km",
     ownerName: "Ramesh Gowda",
     contact: "+91-9876543210",
-    image:
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=400&fit=crop",
+    // Studio apartment interior – compact, bed + kitchenette in one space
+    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=400&fit=crop",
   },
   {
     id: 2,
@@ -39,8 +45,8 @@ const properties = [
     distanceFromCollege: "2.5 km",
     ownerName: "Priya Shetty",
     contact: "+91-9845671234",
-    image:
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=400&fit=crop",
+    // 2BHK modern apartment interior – living room + bedroom setup
+    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=400&fit=crop",
   },
   {
     id: 3,
@@ -56,8 +62,8 @@ const properties = [
     distanceFromCollege: "1.0 km",
     ownerName: "Kavitha Rao",
     contact: "+91-9741236548",
-    image:
-      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&h=400&fit=crop",
+    // PG room – single bed, study table, wardrobe – typical PG interior
+    image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop",
   },
   {
     id: 4,
@@ -73,8 +79,8 @@ const properties = [
     distanceFromCollege: "0.8 km",
     ownerName: "Suresh Kumar",
     contact: "+91-9632587410",
-    image:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&h=400&fit=crop",
+    // Shared apartment – living area shared by multiple students
+    image: "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=600&h=400&fit=crop",
   },
   {
     id: 5,
@@ -90,8 +96,8 @@ const properties = [
     distanceFromCollege: "1.8 km",
     ownerName: "Anand Murthy",
     contact: "+91-9087654321",
-    image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop",
+    // 1BHK – modern bedroom with attached bathroom, clean interior
+    image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&h=400&fit=crop",
   },
   {
     id: 6,
@@ -107,8 +113,8 @@ const properties = [
     distanceFromCollege: "3.0 km",
     ownerName: "Meena Iyer",
     contact: "+91-9567834120",
-    image:
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=400&fit=crop",
+    // Budget PG room – simple single bed room with basic furniture
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=400&fit=crop",
   },
   {
     id: 7,
@@ -124,8 +130,8 @@ const properties = [
     distanceFromCollege: "4.2 km",
     ownerName: "Vijay Shankar",
     contact: "+91-9876012345",
-    image:
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&h=400&fit=crop",
+    // 3BHK – spacious living room with sofa, TV, multiple rooms visible
+    image: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&h=400&fit=crop",
   },
   {
     id: 8,
@@ -141,8 +147,8 @@ const properties = [
     distanceFromCollege: "1.5 km",
     ownerName: "Ravi Prakash",
     contact: "+91-9234567890",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop",
+    // Hostel/dorm room – bunk beds or twin beds, typical student hostel look
+    image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&h=400&fit=crop",
   },
   {
     id: 9,
@@ -158,8 +164,8 @@ const properties = [
     distanceFromCollege: "0.5 km",
     ownerName: "Deepa Nair",
     contact: "+91-9845098765",
-    image:
-      "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=600&h=400&fit=crop",
+    // Furnished 1BHK room – bed with proper headboard, study desk, wardrobe
+    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&h=400&fit=crop",
   },
   {
     id: 10,
@@ -175,8 +181,8 @@ const properties = [
     distanceFromCollege: "0.5 km",
     ownerName: "Shashi Kumar",
     contact: "+91-9870123456",
-    image:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=600&h=400&fit=crop",
+    // 2-sharing PG – two single beds in one room with study tables
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop",
   },
   {
     id: 11,
@@ -192,8 +198,8 @@ const properties = [
     distanceFromCollege: "1.5 km",
     ownerName: "Lakshmi Bai",
     contact: "+91-9900112233",
-    image:
-      "https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=600&h=400&fit=crop",
+    // Studio apartment – open plan with bed, small workspace and kitchenette
+    image: "https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=600&h=400&fit=crop",
   },
   {
     id: 12,
@@ -209,8 +215,8 @@ const properties = [
     distanceFromCollege: "2.0 km",
     ownerName: "Saroja Devi",
     contact: "+91-9988776655",
-    image:
-      "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=600&h=400&fit=crop",
+    // Girls PG – neat, clean bedroom with single bed and wardrobe
+    image: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=600&h=400&fit=crop",
   },
   {
     id: 13,
@@ -226,8 +232,8 @@ const properties = [
     distanceFromCollege: "2.2 km",
     ownerName: "Mohan Raj",
     contact: "+91-9123456789",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+    // Shared flat – bright living room with shared seating space
+    image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&h=400&fit=crop",
   },
   {
     id: 14,
@@ -243,8 +249,8 @@ const properties = [
     distanceFromCollege: "3.5 km",
     ownerName: "Nagesh Babu",
     contact: "+91-9654321098",
-    image:
-      "https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=600&h=400&fit=crop",
+    // Budget hostel/dorm – bunk beds in a shared dormitory room
+    image: "https://images.unsplash.com/photo-1520277739336-7bf67c6e0f8d?w=600&h=400&fit=crop",
   },
   {
     id: 15,
@@ -260,8 +266,8 @@ const properties = [
     distanceFromCollege: "3.0 km",
     ownerName: "Aishwarya Menon",
     contact: "+91-9711223344",
-    image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
+    // Luxury 2BHK – premium apartment interior with elegant furniture
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
   },
 ];
 

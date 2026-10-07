@@ -38,7 +38,6 @@ function Footer() {
             <li><Link to="/roommates">Find Roommate</Link></li>
             <li><Link to="/favorites">Favorites</Link></li>
             <li><Link to="/add-property">Add Property</Link></li>
-            <li><Link to="/about">About</Link></li>
           </ul>
         </div>
 

@@ -106,15 +106,6 @@ function Navbar() {
               Add Property
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={() => setMenuOpen(false)}
-            >
-              About
-            </NavLink>
-          </li>
         </ul>
 
         {/* ── SEARCH BAR ──
